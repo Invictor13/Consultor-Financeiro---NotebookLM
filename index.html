@@ -3,107 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultor Financeiro AI | Data Lineage</title>
-    <link rel="stylesheet" href=".\page_info(github)\style.css">
+    <title>Consultor Financeiro AI | Victor Viana</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
     <header class="glass-header">
         <div class="header-container">
-            <h1 class="logo"><i class="fas fa-brain"></i> Ecossistema RAG</h1>
+            <h1 class="logo">
+                <img src="assets/images/image.png" alt="Logo" class="header-logo">
+                Consultor Financeiro AI
+            </h1>
             <nav class="main-nav">
-                <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Home</button>
-                <button class="nav-btn" data-target="github"><i class="fab fa-github"></i> GitHub</button>
+                <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Início</button>
+                <button class="nav-btn" data-target="fontes"><i class="fas fa-database"></i> Fontes</button>
                 <button class="nav-btn" data-target="notebook"><i class="fas fa-book"></i> NotebookLM</button>
-                <button class="nav-btn" data-target="sobre"><i class="fas fa-user-astronaut"></i> Sobre Mim</button>
+                <button class="nav-btn" data-target="sobre"><i class="fas fa-user-tie"></i> Sobre Mim</button>
             </nav>
         </div>
     </header>
 
     <main class="main-content">
         
+        <!-- INÍCIO -->
         <section id="home" class="content-section active">
-            <h2>Mapeamento de Fontes (Data Lineage)</h2>
-            <p class="subtitle">A infraestrutura de dados resiliente que alimenta nossa IA.</p>
+            <h2>Construindo um Consultor Financeiro Autossustentável</h2>
+            <p class="subtitle">Um ecossistema alimentado por IA e fontes de dados dinâmicas.</p>
+
+            <div class="info-box">
+                <h3><i class="fas fa-lightbulb"></i> A Ideia</h3>
+                <p>Este projeto foi desenvolvido para demonstrar como criar um consultor financeiro utilizando o <strong>NotebookLM</strong> do Google. O diferencial? Ele é projetado com <strong>fontes autossustentáveis</strong>. Isso significa que, ao invés de enviar PDFs estáticos que ficam desatualizados, o sistema é alimentado por links dinâmicos e painéis de dados em tempo real.</p>
+                <p>Dessa forma, você pode interagir com o consultor diariamente para obter as últimas notícias do mercado, cotações e análises macroeconômicas, <em>sem precisar atualizar manualmente os dados</em>.</p>
+            </div>
             
             <div class="cards-grid">
                 <div class="card card-core">
                     <div class="card-header">
-                        <h3>CVM Cadernos 5 e 9</h3>
-                        <span class="badge badge-core">PDF Core</span>
+                        <h3>Design Elegante</h3>
+                        <i class="fas fa-paint-brush"></i>
                     </div>
-                    <div class="url-box">
-                        <code>gov.br/investidor/pt-br/.../cvm-caderno-5.pdf</code>
-                        <button class="copy-btn" data-url="https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/cadernos/cvm-caderno-5.pdf"><i class="fas fa-copy"></i></button>
+                    <p>Interface desenvolvida utilizando tons de verde escuro e dourado/amarelo, inspirados na identidade visual principal.</p>
+                </div>
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>Organização Limpa</h3>
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    <p>Base regulatória de renda variável e governança corporativa.</p>
+                    <p>As 19 fontes de dados estão organizadas através de sanfonas (accordions) para garantir uma leitura suave e sem poluição visual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FONTES -->
+        <section id="fontes" class="content-section">
+            <h2>Mapeamento de Fontes (Data Lineage)</h2>
+            <p class="subtitle">A infraestrutura de dados resiliente que alimenta nossa IA.</p>
+
+            <div class="accordion-container">
+
+                <!-- Categoria 1 -->
+                <button class="accordion"><i class="fas fa-exchange-alt"></i> Câmbio</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span>Remessa Online: Dólar americano Hoje (USD)</span>
+                        <button class="copy-btn" data-url="https://www.remessaonline.com.br/cotacao/cotacao-dolar"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Investing.com: USD/BRL - Cotação Dólar para Real</span>
+                        <button class="copy-btn" data-url="https://br.investing.com/currencies/usd-brl"><i class="fas fa-copy"></i></button>
+                    </div>
                 </div>
 
-                <div class="card card-dynamic">
-                    <div class="card-header">
-                        <h3>Trading Economics Brasil</h3>
-                        <span class="badge badge-dynamic">HTML Dinâmico</span>
+                <!-- Categoria 2 -->
+                <button class="accordion"><i class="fas fa-chart-line"></i> Indicadores Econômicos</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span>Trading Economics: Brazil Inflation Rate</span>
+                        <button class="copy-btn" data-url="https://pt.tradingeconomics.com/brazil/inflation-rate"><i class="fas fa-copy"></i></button>
                     </div>
-                    <div class="url-box">
-                        <code>pt.tradingeconomics.com/brazil/indicators</code>
-                        <button class="copy-btn" data-url="https://pt.tradingeconomics.com/brazil/indicators"><i class="fas fa-copy"></i></button>
+                    <div class="source-item">
+                        <span>Banco Central: Estatísticas monetárias e de crédito</span>
+                        <button class="copy-btn" data-url="https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito"><i class="fas fa-copy"></i></button>
                     </div>
-                    <p>Ingestão em tempo real da Selic, IPCA e PIB sem bloqueio de bot.</p>
+                    <div class="source-item">
+                        <span>Banco Central: Focus Relatório de Mercado</span>
+                        <button class="copy-btn" data-url="https://www.bcb.gov.br/publicacoes/focus"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Trading Economics: Taxa de Crescimento do PIB do Brasil</span>
+                        <button class="copy-btn" data-url="https://pt.tradingeconomics.com/brazil/gdp-growth"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Banco Central: Taxas de juros básicas – Histórico</span>
+                        <button class="copy-btn" data-url="https://www.bcb.gov.br/controleinflacao/historicotaxasjuros"><i class="fas fa-copy"></i></button>
+                    </div>
                 </div>
 
-                <div class="card card-dynamic">
-                    <div class="card-header">
-                        <h3>ADVFN Maiores Altas</h3>
-                        <span class="badge badge-dynamic">HTML Dinâmico</span>
+                <!-- Categoria 3 -->
+                <button class="accordion"><i class="fas fa-coins"></i> Investimentos e Dividendos</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span>Investing.com: Agenda de Dividendos</span>
+                        <button class="copy-btn" data-url="https://br.investing.com/dividends-calendar/"><i class="fas fa-copy"></i></button>
                     </div>
-                    <div class="url-box">
-                        <code>br.advfn.com/bolsa-de-valores/bovespa/maiores-altas</code>
+                    <div class="source-item">
+                        <span>Tesouro Direto: Balanço do Tesouro Direto 2026</span>
+                        <button class="copy-btn" data-url="https://www.tesourodireto.com.br/titulos/balanco-do-tesouro.htm"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Money Times: FIIs - calendário de dividendos de Maio de 2026</span>
+                        <button class="copy-btn" data-url="https://www.moneytimes.com.br/fiis-confira-o-calendario-de-dividendos-de-maio-de-2026/"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Blog brapi.dev: Melhores Corretoras de Valores 2026</span>
+                        <button class="copy-btn" data-url="https://blog.brapi.dev/melhores-corretoras-de-valores-2026/"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <!-- Categoria 4 -->
+                <button class="accordion"><i class="fas fa-building"></i> Mercado de Ações</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span>ADVFN: Cotações Gratis da Bolsa de Valores de SP</span>
+                        <button class="copy-btn" data-url="https://br.advfn.com/bolsa-de-valores/bovespa/bovespa"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Trading Economics: Ibovespa Cai Apesar das Perspectivas</span>
+                        <button class="copy-btn" data-url="https://pt.tradingeconomics.com/brazil/stock-market"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Mais Retorno: Lista Completa das Ações listadas na B3</span>
+                        <button class="copy-btn" data-url="https://maisretorno.com/bolsa/acoes/lista-completa"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>ADVFN: Rankings de BOV - Maiores Altas (%) - Hoje</span>
                         <button class="copy-btn" data-url="https://br.advfn.com/bolsa-de-valores/bovespa/maiores-altas"><i class="fas fa-copy"></i></button>
                     </div>
-                    <p>Radar diário de volatilidade e cotações do mercado à vista.</p>
+                    <div class="source-item">
+                        <span>Relatório do Deep Research: Structural Divergence</span>
+                        <button class="copy-btn" data-url="#"><i class="fas fa-copy"></i></button>
+                    </div>
                 </div>
+
+                <!-- Categoria 5 -->
+                <button class="accordion"><i class="fas fa-newspaper"></i> Notícias e Calendário</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span>CVM: Caderno 5 - Negociações On Line</span>
+                        <button class="copy-btn" data-url="https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/cadernos/cvm-caderno-5.pdf"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Investing.com: Calendário Econômico</span>
+                        <button class="copy-btn" data-url="https://br.investing.com/economic-calendar/"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span>Money Times: Notícias que enriquecem seu dia</span>
+                        <button class="copy-btn" data-url="https://www.moneytimes.com.br/"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
             </div>
         </section>
 
-        <section id="github" class="content-section">
-            <h2>Arquitetura do Repositório</h2>
-            <p class="subtitle">Como o projeto foi estruturado para produção.</p>
-            <div class="info-box">
-                <h3><i class="fas fa-folder-open"></i> Estrutura de Diretórios</h3>
-                <ul>
-                    <li><strong>/data:</strong> Contém o mapeamento de linhagem (este painel).</li>
-                    <li><strong>/prompts:</strong> Engenharia de prompts e comandos de auditoria.</li>
-                    <li><strong>README.md:</strong> Documentação principal e troubleshooting (Cicatrizes RAG).</li>
-                </ul>
-                <a href="#" class="action-link">Acessar Repositório Completo &rarr;</a>
-            </div>
-        </section>
-
+        <!-- NOTEBOOKLM -->
         <section id="notebook" class="content-section">
-            <h2>Comandos do Consultor</h2>
-            <p class="subtitle">Prompts prontos para interagir com a IA ancorada.</p>
+            <h2>Interação com o NotebookLM</h2>
+            <p class="subtitle">Acesse e engaje com o Consultor.</p>
+
+            <div class="info-box center-box">
+                <a href="https://notebooklm.google.com/notebook/360dcfd8-7f7e-45a3-8775-53225e85c73b" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Acessar o Caderno no NotebookLM</a>
+            </div>
+
+            <h3>Prompts Recomendados</h3>
             <div class="prompt-box">
                 <h4>Revisão Macroeconômica Diária</h4>
-                <p>"Com base exclusivamente nas tabelas do Trading Economics e nas notícias injetadas neste caderno, faça um resumo executivo indicando o patamar atual da inflação e da taxa Selic."</p>
+                <p>"Com base nos dados do Banco Central e IBGE presentes nas fontes, faça um resumo executivo indicando o patamar atual da inflação e da taxa Selic, e relacione isso com as principais notícias econômicas do dia."</p>
             </div>
             <div class="prompt-box">
-                <h4>Radar de Ações</h4>
-                <p>"Consulte os dados do ADVFN. Liste quais foram os papéis que registraram as maiores variações do pregão hoje e cruze com as manchetes do Investing.com."</p>
+                <h4>Radar de Ações e Dividendos</h4>
+                <p>"Consulte as informações do Status Invest e B3. Quais empresas têm data com para distribuição de dividendos na próxima semana e qual foi o comportamento recente de suas ações?"</p>
+            </div>
+            <div class="prompt-box">
+                <h4>Resumo Matinal (Morning Call)</h4>
+                <p>"Atue como meu consultor financeiro. Leia as manchetes do Valor Econômico e Bloomberg, verifique o Calendário Econômico do Investing.com e me dê um resumo de 3 pontos principais sobre o que eu preciso saber antes da bolsa abrir hoje."</p>
             </div>
         </section>
 
+        <!-- SOBRE MIM -->
         <section id="sobre" class="content-section">
             <h2>Sobre o Engenheiro</h2>
             <p class="subtitle">Desenvolvedor focado em IA, RAG e Automação Financeira.</p>
             <div class="profile-card">
-                <i class="fas fa-user-circle profile-icon"></i>
-                <h3>Victor Viana</h3>
-                <p>Construindo soluções autossustentáveis que unem o rigor da engenharia de dados com a inteligência do mercado financeiro.</p>
+                <img src="assets/images/image.png" alt="Victor Viana" class="profile-image">
+                <h3>Victor Ladislau Viana (Invictor13)</h3>
+                <p>Construindo soluções autossustentáveis que unem o rigor da engenharia de dados com a inteligência do mercado financeiro, garantindo que as informações estejam sempre precisas e atualizadas.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fas fa-code"></i> Perfil DIO</a>
+                    <a href="https://github.com/Invictor13" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <!-- Adicione outros links sociais aqui se desejar -->
                 </div>
             </div>
         </section>
@@ -111,9 +210,9 @@
     </main>
 
     <footer>
-        <p>Desenvolvido para o Desafio de Projeto DIO | NotebookLM e IA Generativa &copy; 2026</p>
+        <p>Desenvolvido por Victor Ladislau Viana para o Desafio de Projeto DIO | NotebookLM e IA Generativa &copy; 2024</p>
     </footer>
 
-    <script src=".\page_info(github)\script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

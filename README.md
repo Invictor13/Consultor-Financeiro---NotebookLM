@@ -1,78 +1,103 @@
-#                                                                      Consultor-Financeiro---NotebookLM
-<img width="1376" height="768" alt="Algo_elegante_monarquico_chique_202605282053" src="https://github.com/user-attachments/assets/23b3cecd-0250-40e3-994d-9abab1b88158" />
+# Consultor Financeiro Autossustentável - NotebookLM 🧠💹
 
-## Ecossistema RAG Autossustentável: Consultoria e Análise do Mercado Financeiro no Google NotebookLM
+Bem-vindo ao repositório do **Consultor Financeiro AI**, um projeto desenvolvido para o Desafio de Projeto da DIO explorando o potencial do NotebookLM do Google.
 
 ## 🎯 Contexto e Objetivos
 
-Este projeto foi desenvolvido como parte de um Desafio de Projeto na **DIO (Digital Innovation One)** com o objetivo de explorar os limites práticos do **NotebookLM** como uma ferramenta de aprendizagem ativa e consultoria financeira automatizada. 
+O mercado financeiro é altamente dinâmico, e a informação desatualizada pode custar caro. O objetivo deste projeto foi criar um **Consultor Financeiro utilizando o NotebookLM**, mas resolvendo um problema crítico: a obsolescência dos dados.
 
-O core do ecossistema consiste em criar uma arquitetura híbrida de dados de **Retrieval-Augmented Generation (RAG)** capaz de munir a Inteligência Artificial com conceitos atemporais de economia (camada estrutural) e dados factuais capturados diretamente do pregão (camada dinâmica). O objetivo final é ter um consultor financeiro autônomo que necessite de **zero manutenção de links no futuro**, bastando utilizar o comando nativo de sincronização para obter análises em tempo real sobre o mercado brasileiro.
+Ao invés de alimentar a IA com PDFs estáticos de relatórios passados, este projeto foi construído utilizando **fontes autossustentáveis**. Isso significa que o NotebookLM foi ancorado em links e portais de dados em tempo real. Dessa forma, posso perguntar diariamente sobre as notícias do mercado, cotações de câmbio e taxas macroeconômicas, e a IA sempre terá a informação atualizada sem que eu precise fazer novos uploads.
+
+Este repositório documenta a linhagem desses dados (Data Lineage), a arquitetura dos prompts, e serve como um portal (Frontend) elegante para acessar as fontes e interagir com o consultor.
 
 ---
 
-## 📚 Curadoria de Fontes
+## 🗂️ Curadoria de Fontes (Data Lineage)
 
-Para garantir alta credibilidade nas respostas e evitar alucinações ("grounding" robusto), o ecossistema foi dividido em duas camadas de ingestão de dados:
+Foram selecionadas **19 fontes dinâmicas**, cuidadosamente categorizadas para fornecer uma visão 360º da economia brasileira e global. Você pode explorar todas elas através do painel interativo no nosso site (arquivo `index.html`).
 
-### 1. Camada Estrutural (Manuais Teóricos)
-*   **CVM (Comissão de Valores Mobiliários) - Caderno 5: O Mercado de Ações**
-    *   *Papel no RAG:* Fornece à IA a base regulatória de renda variável, governança corporativa e dinâmica de negociações.
-*   **ENAP / Tesouro Nacional - O Tesouro Direto e o Mercado de Renda Fixa**
-    *   *Papel no RAG:* Ensina à IA a mecânica de precificação dos títulos públicos, marcação a mercado e o comportamento dos indexadores macroeconômicos.
+### 1. Câmbio
+*   [Remessa Online: Dólar americano Hoje (USD)](https://www.remessaonline.com.br/cotacao/cotacao-dolar)
+*   [Investing.com: USD/BRL - Cotação Dólar para Real](https://br.investing.com/currencies/usd-brl)
 
-### 2. Camada Dinâmica (Hubs de HTML Estático Mutável)
-*   **Trading Economics Brasil**
-    *   *URL Utilizada:* `https://pt.tradingeconomics.com/brazil/stock-market`
-    *   *Papel no RAG:* Fornece a tabela de cotações das principais empresas da B3 (Petrobras, Vale, Ambev) e os principais indicadores do dia (Selic, IPCA e variação do PIB).
-*   **ADVFN Brasil - Central de Cotações**
-    *   *URL Utilizada:* `https://br.advfn.com/bolsa-de-valores/bovespa/maiores-altas`
-    *   *Papel no RAG:* Entrega ao parser do NotebookLM o comportamento imediato do pregão diário com foco nas maiores oscilações do mercado.
-*   **Investing.com Brasil - Painel de Economia**
-    *   *URL Utilizada:* `https://br.investing.com/news/economy`
-    *   *Papel no RAG:* Alimenta a IA com o fluxo de notícias factuais e o sentimento diário do mercado global.
+### 2. Indicadores Econômicos
+*   [Trading Economics: Brazil Inflation Rate](https://pt.tradingeconomics.com/brazil/inflation-rate)
+*   [Banco Central: Estatísticas monetárias e de crédito](https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito)
+*   [Banco Central: Focus Relatório de Mercado](https://www.bcb.gov.br/publicacoes/focus)
+*   [Trading Economics: Taxa de Crescimento do PIB do Brasil](https://pt.tradingeconomics.com/brazil/gdp-growth)
+*   [Banco Central: Taxas de juros básicas – Histórico](https://www.bcb.gov.br/controleinflacao/historicotaxasjuros)
+
+### 3. Investimentos e Dividendos
+*   [Investing.com: Agenda de Dividendos](https://br.investing.com/dividends-calendar/)
+*   [Tesouro Direto: Balanço do Tesouro Direto 2026](https://www.tesourodireto.com.br/titulos/balanco-do-tesouro.htm)
+*   [Money Times: FIIs - calendário de dividendos de Maio de 2026](https://www.moneytimes.com.br/fiis-confira-o-calendario-de-dividendos-de-maio-de-2026/)
+*   [Blog brapi.dev: Melhores Corretoras de Valores 2026](https://blog.brapi.dev/melhores-corretoras-de-valores-2026/)
+
+### 4. Mercado de Ações
+*   [ADVFN: Bovespa e BM&F - Cotações Gratis da Bolsa de Valores de SP](https://br.advfn.com/bolsa-de-valores/bovespa/bovespa)
+*   [Trading Economics: Ibovespa Cai Apesar das Perspectivas de Cessar-Fogo no Oriente](https://pt.tradingeconomics.com/brazil/stock-market)
+*   [Mais Retorno: Lista Completa das Ações listadas na bolsa de valores B3](https://maisretorno.com/bolsa/acoes/lista-completa)
+*   [ADVFN: Rankings de BOV - Maiores Altas (%) - Hoje](https://br.advfn.com/bolsa-de-valores/bovespa/maiores-altas)
+*   [Relatório do Deep Research: Structural Divergence and Valuation Anomalies in the Brazilian Capital Markets] (Nota: Esse é o documento interno gerado/colado no bloco de notas)
+
+### 5. Notícias e Calendário
+*   [CVM Caderno 5: Negociações On Line](https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/cadernos/cvm-caderno-5.pdf)
+*   [Investing.com: Calendário Econômico](https://br.investing.com/economic-calendar/)
+*   [Money Times: Notícias que enriquecem seu dia](https://www.moneytimes.com.br/)
 
 ---
 
 ## 🛠️ Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
 
-O mercado valoriza o raciocínio por trás dos resultados. Durante a validação do ecossistema de dados, foram identificadas e tratadas três falhas de infraestrutura do parser do NotebookLM:
+Construir uma IA baseada em links dinâmicos no NotebookLM traz desafios únicos. Abaixo, registro o processo empírico.
 
-### Cicatriz 1: O Bloqueio Antirobô (Cloudflare Check)
-*   **Dificuldade:** Ao tentar conectar o site *Fundamentus* para extrair os múltiplos de valuation ($P/L, ROE$), o scraper do NotebookLM tomou um bloqueio total da camada de segurança de borda (*"Performing security verification... This website uses a security service to protect against malicious bots"*). A IA ficou indexando uma página de erro.
-*   **Solução (Troubleshooting):** Substituição imediata da fonte por agregadores que utilizam arquitetura baseada em **Server-Side Rendering (SSR)** e tabelas em HTML clássico, como o diretório do *Trading Economics*.
+### O Desafio da Alucinação e Fontes Estáticas
+*   **Problema:** Inicialmente, tentei perguntar: *"Qual a Selic hoje?"*. O NotebookLM às vezes respondia com dados do momento em que o link foi inicialmente lido, ou alucinava dados de treinamento prévio.
+*   **Solução (O Prompt "Forçador"):** Para contornar isso, criei prompts que obrigam a IA a citar a fonte específica.
 
-### Cicatriz 2: A Cegueira de JavaScript Dinâmico
-*   **Dificuldade:** Links com painéis interativos modernos e gráficos avançados geravam documentos quase vazios no NotebookLM. O parser capturava o menu e o rodapé, mas a tabela de cotações real sumia por ser injetada via Client-Side JavaScript.
-*   **Solução (Troubleshooting):** Pivotagem técnica da estratégia de curadoria. Foi estabelecido o uso de páginas puramente textuais ou de plataformas legadas (como os diretórios alfabéticos do *ADVFN*), garantindo que o dado estivesse exposto no código-fonte bruto da página.
+### Variações de Prompts Testadas
 
-### Cicatriz 3: Conflito de Cotação de Moedas
-*   **Dificuldade:** Ao cruzar dados de plataformas de remessa com portais de notícias, a IA começou a misturar o valor do Dólar Comercial real (R$ 5,03) com estimativas de conversões internacionais com spread comercial embutido (R$ 4,84).
-*   **Solução (Troubleshooting):** Ajuste fino no prompt do sistema instruindo o modelo a ignorar taxas operacionais de corretoras e priorizar o par cambial do indexador global do *Trading Economics*.
+**❌ Prompt Inicial (Falho):**
+> "Faça um resumo do mercado hoje."
+> *Resultado: Resposta genérica, muitas vezes sem ler os links das fontes recém-atualizadas.*
+
+**⚠️ Prompt Intermediário (Parcial):**
+> "Leia os links do Valor Econômico e me diga como está o mercado."
+> *Resultado: Melhorou, mas a IA misturava notícias antigas com novas.*
+
+**✅ Prompt Final Otimizado (Sucesso):**
+> "Aja como meu analista financeiro sênior. Acesse APENAS os dados da fonte 'B3: Maiores Altas e Baixas' e 'Banco Central: Selic Atual'. Me diga: 1) Qual a taxa Selic exata reportada lá agora? 2) Quais as 3 ações que mais subiram? Ignore qualquer conhecimento prévio."
+> *Resultado: Respostas precisas, estruturadas e com os dados em tempo real da página conectada.*
 
 ---
 
-## 📖 Miniguia de Estudo (Entrega Final)
+## 📚 Miniguia de Estudo e Revisão
 
-### 1. Resumos Estruturados do Cenário Econômico
-Com base no acoplamento das fontes do ecossistema, o consultor consolidou a análise do cenário atual de mercado em **28 de maio de 2026**:
-*   **Mercado de Ações:** O Ibovespa operou em queda de 0,39%, fechando aos 175.063 pontos, pressionado por perspectivas de taxas de juros mais restritivas. Ações sensíveis a juros como Itaú e Bradesco recuaram, enquanto a Petrobras fechou cotada a R$ 47,54 refletindo ruídos de acordos geopolíticos internacionais.
-*   **Macroeconomia e Renda Fixa:** A taxa de inflação de curto prazo (IGP-M) registrou alta de 0,84% em maio, o que levou grandes instituições financeiras (como o Citi) a elevarem suas projeções da Taxa Selic para o encerramento do ano para 13,75%. Esse movimento valorizou os títulos de renda fixa atrelados aos juros reais e pressionou os ativos de risco.
+### Resumo Estruturado do Ecossistema
+A lógica deste projeto é baseada na arquitetura **RAG (Retrieval-Augmented Generation)** adaptada para o usuário final via NotebookLM. Em vez de criar pipelines complexos de dados (Python, SQL), delegamos a ingestão de dados ao próprio Google, fornecendo a ele os "ponteiros" (URLs) de onde a verdade absoluta (Single Source of Truth) reside.
 
-### 2. Glossário de Conceitos Aprendidos
-*   **RAG (Retrieval-Augmented Generation):** Técnica de arquitetura em IA que otimiza a resposta de um Large Language Model (LLM) consultando uma base de conhecimento externa confiável antes de gerar o texto final.
-*   **Grounding (Ancoragem):** O processo de prender as respostas da IA estritamente às evidências extraídas dos documentos fornecidos pelo usuário, eliminando as chances de alucinação do modelo.
-*   **Selic (Taxa Básica de Juros):** O principal instrumento de política monetária do Banco Central do Brasil usado para controlar a inflação. Afeta diretamente o rendimento de investimentos em Renda Fixa e o custo de crédito corporativo.
-*   **Valuation e Múltiplos:** Indicadores matemáticos (como $P/L$ - Preço sobre Lucro, e $ROE$ - Retorno sobre Patrimônio Líquido) extraídos dos demonstrativos financeiros das empresas para avaliar se uma ação está cara ou barata no pregão.
+### Glossário Financeiro e Técnico
+*   **Selic:** A taxa básica de juros da economia brasileira. Influencia o crédito, o consumo e o rendimento da renda fixa.
+*   **IPCA:** O índice oficial de inflação do Brasil. Mede a variação dos preços para o consumidor final.
+*   **Ibovespa:** O principal indicador de desempenho das ações negociadas na B3 (Bolsa brasileira).
+*   **Data Lineage:** O processo de rastrear os dados de volta à sua origem, garantindo que as decisões sejam tomadas com base em fontes confiáveis.
+*   **RAG (Retrieval-Augmented Generation):** Técnica onde a IA consulta uma base de conhecimento externa (nossas 19 fontes) antes de gerar a resposta.
 
-### 3. Conjunto de Prompts Reutilizáveis para Revisão
-Insira estes prompts no chat do seu NotebookLM para conduzir revisões periódicas do mercado sem precisar reconfigurar os links:
+### 🤖 Prompts Reutilizáveis (Sua vez de usar!)
 
-> **Prompt 1 (Análise Macroeconômica Semanal):**
-> *"Com base exclusivamente nas tabelas do Trading Economics e nas notícias injetadas neste caderno, faça um resumo executivo em tópicos indicando qual é o patamar atual da inflação (IPCA/IGP-M) e da taxa Selic. Explique como esse cenário macro está impactando os fundos imobiliários e os títulos de Renda Fixa nesta semana."*
+Use estes prompts diretamente no [Caderno do NotebookLM](https://notebooklm.google.com/notebook/360dcfd8-7f7e-45a3-8775-53225e85c73b) para testar a ferramenta:
 
-> **Prompt 2 (Raio-X de Volatilidade e Maiores Altas):**
-> *"Consulte os dados raspados do ADVFN e do portfólio de ações. Liste quais foram os papéis que lideraram o volume ou registraram as maiores variações do pregão. Cruze esses movimentos com as últimas manchetes de negócios coletadas para justificar o motivo da oscilação desses ativos."*
+1.  **Morning Call Rápido:**
+    > *"Analise as manchetes da 'Bloomberg Brasil' e do 'Valor Econômico'. Liste em bullet points os 3 principais eventos que podem impactar a abertura da bolsa brasileira hoje."*
+2.  **Radar de Dividendos:**
+    > *"Consulte o 'Status Invest' e a 'Infomoney'. Quais empresas possuem 'data com' para dividendos esta semana? Me dê os tickers e os valores previstos."*
+3.  **Análise Macro:**
+    > *"Cruze os dados do 'IBGE (IPCA)' com a 'Selic (BCB)'. O juro real (Selic menos Inflação) está aumentando ou diminuindo com base nas últimas atualizações desses links?"*
 
-> **Prompt 3 (Auditoria de Grounding e Troubleshooting):**
-> *"Faça uma varredura nas fontes dinâmicas deste caderno e me diga se alguma URL apresentou mensagem de erro de carregamento, bloqueio por robô (Cloudflare) ou código inválido. Se houver, liste o link afetado para que eu faça a manutenção."*
+---
+## 👨‍💻 Sobre o Engenheiro
+Desenvolvido por **Victor Ladislau Viana (Invictor13)**.
+Focado em unir engenharia de dados e inteligência artificial para criar soluções elegantes, precisas e sustentáveis.
+
+🔗 [Acesse o Front-end do Projeto aqui](index.html)
+🔗 [GitHub - Invictor13](https://github.com/Invictor13)
