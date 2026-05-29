@@ -1,20 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Lógica de Navegação Elegante (Tabs)
-    const navButtons = document.querySelectorAll('.nav-btn');
+    const navButtons = document.querySelectorAll('.nav-btn, .nav-btn-cta');
+    const navButtonsHeader = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.content-section');
 
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove classe ativa de todos os botões e seções
-            navButtons.forEach(btn => btn.classList.remove('active'));
+            const targetId = button.getAttribute('data-target');
+
+            // Remove classe ativa de todos os botões de header e seções
+            navButtonsHeader.forEach(btn => btn.classList.remove('active'));
             sections.forEach(sec => sec.classList.remove('active'));
 
-            // Adiciona classe ativa no botão clicado
-            button.classList.add('active');
+            // Adiciona classe ativa no botão do header correspondente
+            const headerBtn = document.querySelector(`.nav-btn[data-target="${targetId}"]`);
+            if(headerBtn) {
+                headerBtn.classList.add('active');
+            }
 
             // Exibe a seção correspondente
-            const targetId = button.getAttribute('data-target');
             document.getElementById(targetId).classList.add('active');
+
+            // Rola para o topo suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 

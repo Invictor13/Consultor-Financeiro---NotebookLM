@@ -308,6 +308,47 @@ h3 {
 .copy-btn:hover { color: var(--accent); }
 
 
+/* Bloco de Código de Prompts */
+.prompt-code-container {
+    position: relative;
+    margin: 15px 0;
+    background: #0a0e17; /* Fundo bem escuro estilo terminal */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    padding-bottom: 50px; /* Espaço para o botão de copiar */
+}
+
+.prompt-code-container pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.prompt-code-container code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #e2e8f0; /* Cor de texto legível para terminal */
+    line-height: 1.5;
+}
+
+.prompt-copy {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.prompt-copy:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 /* Boxes Extras */
 .info-box, .prompt-box, .profile-card {
     background: var(--panel-bg);
