@@ -52,9 +52,9 @@ body {
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -76,7 +76,29 @@ body {
 }
 
 /* Navegação Elegante */
-.main-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+.main-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 5px; /* Pra dar espaco pra scrollbar no mobile */
+}
+/* Estilo da scrollbar da navegação */
+.main-nav::-webkit-scrollbar {
+    height: 4px;
+}
+.main-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+.main-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+}
+.main-nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.6);
+}
 .nav-btn {
     background: transparent;
     border: 1px solid transparent;
