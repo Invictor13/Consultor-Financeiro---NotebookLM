@@ -34,81 +34,168 @@
         
         <!-- INÍCIO -->
         <section id="home" class="content-section active">
-            <h2>Construindo um Consultor Financeiro Autossustentável</h2>
-            <p class="subtitle">Um ecossistema alimentado por IA e fontes de dados dinâmicas.</p>
 
-            <div class="info-box">
-                <h3><i class="fas fa-lightbulb"></i> A Ideia</h3>
-                <p>Este projeto foi desenvolvido para demonstrar como criar um consultor financeiro utilizando o <strong>NotebookLM</strong> do Google. O diferencial? Ele é projetado com <strong>fontes autossustentáveis</strong>. Isso significa que, ao invés de enviar PDFs estáticos que ficam desatualizados, o sistema é alimentado por links dinâmicos e painéis de dados em tempo real.</p>
-                <p>Dessa forma, você pode interagir com o consultor diariamente para obter as últimas notícias do mercado, cotações e análises macroeconômicas, <em>sem precisar atualizar manualmente os dados</em>.</p>
-            </div>
-            
-            <div class="cards-grid">
-                <div class="card card-core">
-                    <div class="card-header">
-                        <h3>Design Elegante</h3>
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <p>Interface desenvolvida utilizando tons de verde escuro e dourado/amarelo, inspirados na identidade visual principal.</p>
-                </div>
-                <div class="card card-core">
-                    <div class="card-header">
-                        <h3>Organização Limpa</h3>
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <p>As 19 fontes de dados estão organizadas através de sanfonas (accordions) para garantir uma leitura suave e sem poluição visual.</p>
+            <!-- 1. Seção Hero -->
+            <div class="hero-section">
+                <h2>Consultor Financeiro com IA: Inteligência Artificial na Educação Financeira</h2>
+                <p class="subtitle">Um estudo prático sobre como o NotebookLM do Google atua como um copiloto para curadoria, análise e organização de conhecimentos em finanças pessoais e investimentos.</p>
+                <div class="badges-container">
+                    <span class="badge">🚀 Desafio DIO</span>
+                    <span class="badge">🤖 NotebookLM</span>
+                    <span class="badge">💰 Finanças</span>
                 </div>
             </div>
+
+            <!-- 2. Seção Contexto e Objetivos -->
+            <div class="context-objectives-grid">
+                <div class="info-box context-box">
+                    <h3><i class="fas fa-globe"></i> O Contexto</h3>
+                    <p>O mercado financeiro e a educação financeira exigem o processamento de um volume massivo de informações, dados e jargões técnicos. O contexto deste projeto é explorar como a Inteligência Artificial pode eliminar esse gargalo de aprendizado. Utilizando o NotebookLM do Google, a proposta é transformar horas de leitura de relatórios e guias financeiros em um banco de dados inteligente, rápido e de alta precisão.</p>
+                </div>
+                <div class="info-box objectives-box">
+                    <h3><i class="fas fa-bullseye"></i> Os Objetivos</h3>
+                    <ul class="objectives-list">
+                        <li><strong>Otimização da Informação:</strong> Consolidar fontes financeiras complexas em resumos ágeis e diretos.</li>
+                        <li><strong>Engenharia de Prompts:</strong> Desenvolver comandos precisos para extrair estratégias de investimento sem alucinações da IA.</li>
+                        <li><strong>Criação de um Copiloto:</strong> Configurar a ferramenta para atuar como um "Consultor Financeiro" de bolso para decisões futuras.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Seção Dashboard -->
+            <div class="dashboard-grid">
+                <div class="card dashboard-card">
+                    <h3>5</h3>
+                    <p>Fontes Analisadas</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3>Engenharia de Prompts</h3>
+                    <p>Testes e Refinamentos</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3>Glossário</h3>
+                    <p>Conceitos Mapeados</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3>Foco</h3>
+                    <p>Renda Fixa, Variável e Planejamento</p>
+                </div>
+            </div>
+
+            <!-- 4. Seção Mapa do Projeto -->
+            <div class="info-box project-map-section">
+                <h3><i class="fas fa-map-signs"></i> Mapa do Projeto</h3>
+                <ul class="project-map-list">
+                    <li onclick="document.querySelector('.nav-btn[data-target=\'miniguia\']').click()">
+                        <i class="fas fa-book-open"></i> <strong>Miniguia de Estudo:</strong> Resumos estruturados, glossário e prompts reutilizáveis.
+                    </li>
+                    <li onclick="document.querySelector('.nav-btn[data-target=\'fontes\']').click()">
+                        <i class="fas fa-database"></i> <strong>Fontes:</strong> Os documentos e links base da curadoria.
+                    </li>
+                    <li onclick="document.querySelector('.nav-btn[data-target=\'notebook\']').click()">
+                        <i class="fas fa-robot"></i> <strong>NotebookLM:</strong> Sobre a ferramenta utilizada.
+                    </li>
+                    <li onclick="document.querySelector('.nav-btn[data-target=\'desenvolvimento\']').click()">
+                        <i class="fas fa-cogs"></i> <strong>Desenvolvimento:</strong> O histórico de prompts, troubleshooting e raciocínio técnico.
+                    </li>
+                    <li onclick="document.querySelector('.nav-btn[data-target=\'sobre\']').click()">
+                        <i class="fas fa-user-tie"></i> <strong>Sobre Mim:</strong> Um pouco da minha trajetória.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 5. Call to Action -->
+            <div class="cta-section">
+                <button class="btn-primary cta-btn" onclick="document.querySelector('.nav-btn[data-target=\'miniguia\']').click()">Acessar o Miniguia de Estudos &nbsp; ➔</button>
+            </div>
+
         </section>
 
         <!-- MINIGUIA DE ESTUDO -->
         <section id="miniguia" class="content-section">
-            <h2>Miniguia de Estudo</h2>
-            <p class="subtitle">Consolidação do material de estudo e aprendizados chave.</p>
+            <h2>Miniguia de Estudo: Inteligência Financeira</h2>
+            <p class="subtitle">A consolidação dos principais aprendizados, conceitos e ferramentas extraídos através da curadoria do NotebookLM.</p>
 
             <h3>Resumos Estruturados</h3>
             <div class="cards-grid">
                 <div class="card card-core">
                     <div class="card-header">
-                        <h3>Fundamentos</h3>
-                        <i class="fas fa-book-open"></i>
+                        <h3>Planejamento Financeiro e Reserva de Emergência</h3>
+                        <i class="fas fa-piggy-bank"></i>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                 </div>
                 <div class="card card-core">
                     <div class="card-header">
-                        <h3>Aplicações Práticas</h3>
-                        <i class="fas fa-tools"></i>
+                        <h3>Estratégias em Renda Fixa (Tesouro, CDBs, LCI/LCA)</h3>
+                        <i class="fas fa-landmark"></i>
                     </div>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>Fundamentos da Renda Variável</h3>
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                 </div>
             </div>
 
-            <h3 style="margin-top: 40px;">Glossário & Prompts</h3>
+            <h3 style="margin-top: 40px;">Glossário de Conceitos</h3>
             <div class="accordion-container">
-                <!-- Glossário -->
-                <button class="accordion"><i class="fas fa-spell-check"></i> Glossário Financeiro</button>
+                <button class="accordion"><i class="fas fa-spell-check"></i> Taxa Selic e CDI</button>
                 <div class="panel">
-                    <div class="source-item">
-                        <span><strong>Termo 1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                    </div>
-                    <div class="source-item">
-                        <span><strong>Termo 2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
                     </div>
                 </div>
 
-                <!-- Prompts Reutilizáveis -->
-                <button class="accordion"><i class="fas fa-terminal"></i> Prompts Reutilizáveis</button>
+                <button class="accordion"><i class="fas fa-percentage"></i> Juros Compostos</button>
                 <div class="panel">
-                    <div class="source-item">
-                        <span><strong>Análise Rápida:</strong> "Lorem ipsum dolor sit amet..."</span>
-                        <button class="copy-btn" data-url="Lorem ipsum dolor sit amet..."><i class="fas fa-copy"></i></button>
-                    </div>
-                    <div class="source-item">
-                        <span><strong>Resumo Semanal:</strong> "Ut enim ad minim veniam..."</span>
-                        <button class="copy-btn" data-url="Ut enim ad minim veniam..."><i class="fas fa-copy"></i></button>
+                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
                     </div>
                 </div>
+
+                <button class="accordion"><i class="fas fa-file-invoice-dollar"></i> Custo Efetivo Total (CET)</button>
+                <div class="panel">
+                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Prompts Reutilizáveis (Para Revisões)</h3>
+            <div class="accordion-container">
+                <button class="accordion"><i class="fas fa-robot"></i> Simulador de Cenários de Investimento</button>
+                <div class="panel">
+                    <div class="prompt-code-container">
+                        <pre><code>Atue como um simulador de investimentos. Dado um capital inicial de R$ 10.000,00 e aportes mensais de R$ 500,00, projete o rendimento em 5 anos considerando a taxa Selic atual. Descreva dois cenários: um otimista e um conservador.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Atue como um simulador de investimentos. Dado um capital inicial de R$ 10.000,00 e aportes mensais de R$ 500,00, projete o rendimento em 5 anos considerando a taxa Selic atual. Descreva dois cenários: um otimista e um conservador."><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                </div>
+
+                <button class="accordion"><i class="fas fa-user-shield"></i> Avaliador de Perfil de Risco</button>
+                <div class="panel">
+                    <div class="prompt-code-container">
+                        <pre><code>Gere um questionário de 5 perguntas de múltipla escolha para avaliar o meu perfil de investidor (conservador, moderado ou arrojado). Após eu responder, me dê o diagnóstico do meu perfil e sugira uma alocação de carteira ideal.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Gere um questionário de 5 perguntas de múltipla escolha para avaliar o meu perfil de investidor (conservador, moderado ou arrojado). Após eu responder, me dê o diagnóstico do meu perfil e sugira uma alocação de carteira ideal."><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                </div>
+
+                <button class="accordion"><i class="fas fa-chart-pie"></i> Estruturação de Orçamento Mensal 50/30/20</button>
+                <div class="panel">
+                    <div class="prompt-code-container">
+                        <pre><code>Construa uma planilha orçamentária utilizando a regra 50/30/20 para uma renda líquida de R$ 5.000,00. Detalhe quais tipos de despesas se encaixam em cada categoria e sugira ferramentas para acompanhamento.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Construa uma planilha orçamentária utilizando a regra 50/30/20 para uma renda líquida de R$ 5.000,00. Detalhe quais tipos de despesas se encaixam em cada categoria e sugira ferramentas para acompanhamento."><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container" style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
+                <button class="btn-primary nav-btn-cta" data-target="fontes" style="border: none; cursor: pointer; font-size: 1.1rem; padding: 15px 30px;">
+                    Conhecer as Fontes da Curadoria &nbsp;<i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </section>
 
