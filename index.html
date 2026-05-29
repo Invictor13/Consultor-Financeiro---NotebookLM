@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor Financeiro AI | Data Lineage</title>
+    <link rel="stylesheet" href=".\page_info(github)\style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <h1 class="logo"><i class="fas fa-brain"></i> Ecossistema RAG</h1>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Home</button>
+                <button class="nav-btn" data-target="github"><i class="fab fa-github"></i> GitHub</button>
+                <button class="nav-btn" data-target="notebook"><i class="fas fa-book"></i> NotebookLM</button>
+                <button class="nav-btn" data-target="sobre"><i class="fas fa-user-astronaut"></i> Sobre Mim</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section id="home" class="content-section active">
+            <h2>Mapeamento de Fontes (Data Lineage)</h2>
+            <p class="subtitle">A infraestrutura de dados resiliente que alimenta nossa IA.</p>
+            
+            <div class="cards-grid">
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>CVM Cadernos 5 e 9</h3>
+                        <span class="badge badge-core">PDF Core</span>
+                    </div>
+                    <div class="url-box">
+                        <code>gov.br/investidor/pt-br/.../cvm-caderno-5.pdf</code>
+                        <button class="copy-btn" data-url="https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/cadernos/cvm-caderno-5.pdf"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <p>Base regulatória de renda variável e governança corporativa.</p>
+                </div>
+
+                <div class="card card-dynamic">
+                    <div class="card-header">
+                        <h3>Trading Economics Brasil</h3>
+                        <span class="badge badge-dynamic">HTML Dinâmico</span>
+                    </div>
+                    <div class="url-box">
+                        <code>pt.tradingeconomics.com/brazil/indicators</code>
+                        <button class="copy-btn" data-url="https://pt.tradingeconomics.com/brazil/indicators"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <p>Ingestão em tempo real da Selic, IPCA e PIB sem bloqueio de bot.</p>
+                </div>
+
+                <div class="card card-dynamic">
+                    <div class="card-header">
+                        <h3>ADVFN Maiores Altas</h3>
+                        <span class="badge badge-dynamic">HTML Dinâmico</span>
+                    </div>
+                    <div class="url-box">
+                        <code>br.advfn.com/bolsa-de-valores/bovespa/maiores-altas</code>
+                        <button class="copy-btn" data-url="https://br.advfn.com/bolsa-de-valores/bovespa/maiores-altas"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <p>Radar diário de volatilidade e cotações do mercado à vista.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="content-section">
+            <h2>Arquitetura do Repositório</h2>
+            <p class="subtitle">Como o projeto foi estruturado para produção.</p>
+            <div class="info-box">
+                <h3><i class="fas fa-folder-open"></i> Estrutura de Diretórios</h3>
+                <ul>
+                    <li><strong>/data:</strong> Contém o mapeamento de linhagem (este painel).</li>
+                    <li><strong>/prompts:</strong> Engenharia de prompts e comandos de auditoria.</li>
+                    <li><strong>README.md:</strong> Documentação principal e troubleshooting (Cicatrizes RAG).</li>
+                </ul>
+                <a href="#" class="action-link">Acessar Repositório Completo &rarr;</a>
+            </div>
+        </section>
+
+        <section id="notebook" class="content-section">
+            <h2>Comandos do Consultor</h2>
+            <p class="subtitle">Prompts prontos para interagir com a IA ancorada.</p>
+            <div class="prompt-box">
+                <h4>Revisão Macroeconômica Diária</h4>
+                <p>"Com base exclusivamente nas tabelas do Trading Economics e nas notícias injetadas neste caderno, faça um resumo executivo indicando o patamar atual da inflação e da taxa Selic."</p>
+            </div>
+            <div class="prompt-box">
+                <h4>Radar de Ações</h4>
+                <p>"Consulte os dados do ADVFN. Liste quais foram os papéis que registraram as maiores variações do pregão hoje e cruze com as manchetes do Investing.com."</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="content-section">
+            <h2>Sobre o Engenheiro</h2>
+            <p class="subtitle">Desenvolvedor focado em IA, RAG e Automação Financeira.</p>
+            <div class="profile-card">
+                <i class="fas fa-user-circle profile-icon"></i>
+                <h3>Victor Viana</h3>
+                <p>Construindo soluções autossustentáveis que unem o rigor da engenharia de dados com a inteligência do mercado financeiro.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fas fa-code"></i> Perfil DIO</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o Desafio de Projeto DIO | NotebookLM e IA Generativa &copy; 2026</p>
+    </footer>
+
+    <script src=".\page_info(github)\script.js"></script>
+</body>
+</html>

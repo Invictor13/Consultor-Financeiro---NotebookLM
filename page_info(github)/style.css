@@ -1,0 +1,135 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-glass: rgba(30, 41, 59, 0.7);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --core-color: #10b981;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho Glassmorphism */
+.glass-header {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo { font-size: 1.5rem; font-weight: 600; color: var(--text-primary); }
+.logo i { color: var(--accent); margin-right: 8px; }
+
+/* Navegação Elegante */
+.main-nav { display: flex; gap: 10px; }
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.nav-btn:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+.nav-btn.active { color: #fff; background: var(--accent); }
+
+/* Área Principal */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Transição de Seções */
+.content-section { display: none; animation: fadeIn 0.4s ease-out; }
+.content-section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+h2 { font-size: 2rem; margin-bottom: 5px; }
+.subtitle { color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem; }
+
+/* Cards do Mapeamento */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    border-top: 4px solid var(--accent);
+}
+.card-core { border-top-color: var(--core-color); }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+.card h3 { font-size: 1.2rem; }
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+.badge-core { background: rgba(16, 185, 129, 0.2); color: var(--core-color); }
+.badge-dynamic { background: rgba(59, 130, 246, 0.2); color: var(--accent); }
+
+.url-box {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 6px; margin-bottom: 15px;
+}
+.url-box code { color: var(--text-secondary); font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; }
+.copy-btn { background: transparent; border: none; color: var(--text-secondary); cursor: pointer; transition: color 0.2s; }
+.copy-btn:hover { color: var(--text-primary); }
+
+/* Boxes Extras (GitHub e Notebook) */
+.info-box, .prompt-box, .profile-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.info-box ul { list-style: none; margin: 15px 0; }
+.info-box li { margin-bottom: 10px; color: var(--text-secondary); }
+.info-box li strong { color: var(--text-primary); }
+.action-link { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+.prompt-box h4 { color: var(--accent); margin-bottom: 10px; }
+.prompt-box p { font-style: italic; color: var(--text-secondary); border-left: 3px solid var(--border-color); padding-left: 10px; }
+
+/* Profile */
+.profile-card { text-align: center; }
+.profile-icon { font-size: 4rem; color: var(--accent); margin-bottom: 15px; }
+.social-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+.social-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+.social-links a:hover { color: var(--accent); }
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-glass);
+}
