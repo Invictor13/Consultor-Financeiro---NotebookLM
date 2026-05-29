@@ -1,0 +1,16 @@
+127.0.0.1 - - [29/May/2026 17:44:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:17] "GET /assets/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:17] "GET /assets/images/image.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:17] "GET /assets/js/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:19] "GET /assets/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:19] "GET /assets/images/image.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:44:19] "GET /assets/js/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:45:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:45:26] "GET /assets/images/image.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:45:26] "GET /assets/js/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:45:26] "GET /assets/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:46:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:46:20] "GET /assets/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:46:20] "GET /assets/images/image.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/May/2026 17:46:20] "GET /assets/js/script.js HTTP/1.1" 200 -
