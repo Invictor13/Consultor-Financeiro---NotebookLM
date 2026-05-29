@@ -1,12 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Lógica de Navegação Elegante (Tabs)
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const ctaButtons = document.querySelectorAll('.cta-btn'); // Botões de chamada para ação nas seções
     const navButtons = document.querySelectorAll('.nav-btn, .nav-btn-cta');
     const navButtonsHeader = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.content-section');
 
+    function activateTab(targetId) {
+        // Remove classe ativa de todos os botões da navegação e seções
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        // Adiciona classe ativa no botão correspondente da navegação principal
+        const targetNavButton = document.querySelector(`.nav-btn[data-target="${targetId}"]`);
+        if (targetNavButton) {
+            targetNavButton.classList.add('active');
+        }
+
+        // Exibe a seção correspondente
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola pro topo suavemente
+        }
+    }
+
+    // Adiciona evento aos botões do menu de navegação
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const targetId = button.getAttribute('data-target');
+            activateTab(targetId);
+        });
+    });
+
+    // Adiciona evento aos botões CTA dentro das seções
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            activateTab(targetId);
 
             // Remove classe ativa de todos os botões de header e seções
             navButtonsHeader.forEach(btn => btn.classList.remove('active'));
