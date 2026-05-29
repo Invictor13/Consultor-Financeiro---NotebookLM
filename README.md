@@ -1,4 +1,4 @@
-# Consultor-Financeiro---NotebookLM
+#                                                                      Consultor-Financeiro---NotebookLM
 <img width="1376" height="768" alt="Algo_elegante_monarquico_chique_202605282053" src="https://github.com/user-attachments/assets/23b3cecd-0250-40e3-994d-9abab1b88158" />
 
 ## Ecossistema RAG Autossustentável: Consultoria e Análise do Mercado Financeiro no Google NotebookLM
