@@ -50,7 +50,7 @@
             <div class="context-objectives-grid">
                 <div class="info-box context-box">
                     <h3><i class="fas fa-globe"></i> O Contexto</h3>
-                    <p>O mercado financeiro e a educação financeira exigem o processamento de um volume massivo de informações, dados e jargões técnicos. O contexto deste projeto é explorar como a Inteligência Artificial pode eliminar esse gargalo de aprendizado. Utilizando o NotebookLM do Google, a proposta é transformar horas de leitura de relatórios e guias financeiros em um banco de dados inteligente, rápido e de alta precisão.</p>
+                    <p>O mercado financeiro e a educação financeira exigem o processamento de um volume massivo de informações, dados e jargões técnicos. O contexto deste projeto é explorar como a Inteligência Artificial pode eliminar esse gargalo de aprendizado. Utilizando o NotebookLM do Google, a grande inovação é criar uma arquitetura autossustentável focada na ingestão de dados de portais dinâmicos em tempo real, abandonando totalmente o uso de PDFs estáticos para garantir um consultor sempre atualizado e de alta precisão.</p>
                 </div>
                 <div class="info-box objectives-box">
                     <h3><i class="fas fa-bullseye"></i> Os Objetivos</h3>
@@ -65,8 +65,8 @@
             <!-- 3. Seção Dashboard -->
             <div class="dashboard-grid">
                 <div class="card dashboard-card">
-                    <h3>5</h3>
-                    <p>Fontes Analisadas</p>
+                    <h3>19</h3>
+                    <p>Fontes Dinâmicas</p>
                 </div>
                 <div class="card dashboard-card">
                     <h3>Engenharia de Prompts</h3>
@@ -116,47 +116,55 @@
             <h2>Miniguia de Estudo: Inteligência Financeira</h2>
             <p class="subtitle">A consolidação dos principais aprendizados, conceitos e ferramentas extraídos através da curadoria do NotebookLM.</p>
 
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Glossário Financeiro e Técnico</h3>
+            <div class="dashboard-grid" style="margin-bottom: 40px;">
+                <div class="card dashboard-card">
+                    <h3><i class="fas fa-percentage"></i> Selic</h3>
+                    <p>A taxa básica de juros da economia brasileira. Influencia o crédito, o consumo e o rendimento da renda fixa.</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3><i class="fas fa-shopping-cart"></i> IPCA</h3>
+                    <p>O índice oficial de inflação do Brasil. Mede a variação dos preços para o consumidor final.</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3><i class="fas fa-chart-bar"></i> Ibovespa</h3>
+                    <p>O principal indicador de desempenho das ações negociadas na B3 (Bolsa brasileira).</p>
+                </div>
+                <div class="card dashboard-card">
+                    <h3><i class="fas fa-project-diagram"></i> Data Lineage</h3>
+                    <p>O processo de rastrear os dados de volta à sua origem, garantindo decisões baseadas em fontes confiáveis.</p>
+                </div>
+                <div class="card dashboard-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+                    <h3><i class="fas fa-brain"></i> RAG</h3>
+                    <p>Retrieval-Augmented Generation: Técnica onde a IA consulta uma base de conhecimento externa (nossas 19 fontes) antes de gerar a resposta.</p>
+                </div>
+            </div>
+
             <h3>Exemplos de Prompts para o NotebookLM</h3>
             <p style="margin-bottom: 20px; color: var(--text-secondary);">Utilize estes exemplos de comandos (prompts) diretamente no NotebookLM para interagir com a base de documentos fornecida. Eles foram desenhados para extrair análises, resumos e informações complexas de forma clara e objetiva.</p>
 
             <div class="accordion-container">
-                <button class="accordion"><i class="fas fa-file-contract"></i> Resumo de Títulos Públicos (Tesouro Direto)</button>
+                <button class="accordion"><i class="fas fa-sun"></i> Morning Call Rápido</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Com base no Guia Oficial do Tesouro Direto, resuma os principais tipos de títulos públicos disponíveis. Em seguida, indique de forma clara para qual perfil de investidor e prazo (curto, médio ou longo) cada um é mais adequado.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Com base no Guia Oficial do Tesouro Direto, resuma os principais tipos de títulos públicos disponíveis. Em seguida, indique de forma clara para qual perfil de investidor e prazo (curto, médio ou longo) cada um é mais adequado."><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Analise as manchetes da 'Bloomberg Brasil' e do 'Valor Econômico'. Liste em bullet points os 3 principais eventos que podem impactar a abertura da bolsa brasileira hoje.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Analise as manchetes da 'Bloomberg Brasil' e do 'Valor Econômico'. Liste em bullet points os 3 principais eventos que podem impactar a abertura da bolsa brasileira hoje."><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
 
-                <button class="accordion"><i class="fas fa-chart-line"></i> Análise de Tendência de Juros (Focus vs Selic)</button>
+                <button class="accordion"><i class="fas fa-money-bill-wave"></i> Radar de Dividendos</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Analisando o Relatório Focus e o Histórico da Taxa Selic fornecidos, me explique qual é a tendência para a taxa de juros nos próximos 12 meses. Como esse cenário afeta diretamente a rentabilidade de investimentos em Renda Fixa atrelados ao CDI?</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Analisando o Relatório Focus e o Histórico da Taxa Selic fornecidos, me explique qual é a tendência para a taxa de juros nos próximos 12 meses. Como esse cenário afeta diretamente a rentabilidade de investimentos em Renda Fixa atrelados ao CDI?"><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Consulte o 'Status Invest' e a 'Infomoney'. Quais empresas possuem 'data com' para dividendos esta semana? Me dê os tickers e os valores previstos.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Consulte o 'Status Invest' e a 'Infomoney'. Quais empresas possuem 'data com' para dividendos esta semana? Me dê os tickers e os valores previstos."><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
 
-                <button class="accordion"><i class="fas fa-spell-check"></i> Extração de Conceitos e Glossário</button>
+                <button class="accordion"><i class="fas fa-chart-pie"></i> Análise Macro</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Liste os 5 conceitos financeiros mais importantes abordados nos documentos fornecidos sobre investimentos. Explique cada conceito de forma extremamente didática e simplificada, utilizando exemplos do dia a dia, como se estivesse explicando para um investidor iniciante.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Liste os 5 conceitos financeiros mais importantes abordados nos documentos fornecidos sobre investimentos. Explique cada conceito de forma extremamente didática e simplificada, utilizando exemplos do dia a dia, como se estivesse explicando para um investidor iniciante."><i class="fas fa-copy"></i> Copiar</button>
-                    </div>
-                </div>
-
-                <button class="accordion"><i class="fas fa-calendar-alt"></i> Planejamento com Agenda de Dividendos</button>
-                <div class="panel">
-                    <div class="prompt-code-container">
-                        <pre><code>Utilize a Agenda de Dividendos Mensal e os outros relatórios para criar uma estratégia de montagem de carteira focada na geração de renda passiva. Quais setores da economia pagam dividendos mais consistentes segundo os documentos?</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Utilize a Agenda de Dividendos Mensal e os outros relatórios para criar uma estratégia de montagem de carteira focada na geração de renda passiva. Quais setores da economia pagam dividendos mais consistentes segundo os documentos?"><i class="fas fa-copy"></i> Copiar</button>
-                    </div>
-                </div>
-
-                <button class="accordion"><i class="fas fa-balance-scale"></i> Tabela Comparativa de Riscos</button>
-                <div class="panel">
-                    <div class="prompt-code-container">
-                        <pre><code>Com base em todas as fontes carregadas, gere uma tabela Markdown comparando os principais riscos associados ao investimento no Tesouro Direto versus o investimento em Renda Variável (Ações/FIIs). Inclua os fatores de liquidez, volatilidade e garantia do FGC/Tesouro Nacional.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Com base em todas as fontes carregadas, gere uma tabela Markdown comparando os principais riscos associados ao investimento no Tesouro Direto versus o investimento em Renda Variável (Ações/FIIs). Inclua os fatores de liquidez, volatilidade e garantia do FGC/Tesouro Nacional."><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Cruze os dados do 'IBGE (IPCA)' com a 'Selic (BCB)'. O juro real (Selic menos Inflação) está aumentando ou diminuindo com base nas últimas atualizações desses links?</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Cruze os dados do 'IBGE (IPCA)' com a 'Selic (BCB)'. O juro real (Selic menos Inflação) está aumentando ou diminuindo com base nas últimas atualizações desses links?"><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
             </div>
@@ -172,48 +180,58 @@
         <section id="curadoria" class="content-section">
             <div class="header-section">
                 <h2>Documentos</h2>
-                <p class="subtitle">A base de dados selecionada para alimentar a Inteligência Artificial e garantir um escopo de informações confiáveis e atualizadas.</p>
+                <p class="subtitle">A base de dados selecionada para alimentar a Inteligência Artificial e garantir um escopo de informações confiáveis e atualizadas. A grande inovação deste projeto é ser autossustentável e utilizar apenas links de portais dinâmicos em tempo real, abandonando totalmente PDFs estáticos.</p>
             </div>
 
             <div class="curadoria-grid">
                 <!-- Card 1 -->
                 <div class="curadoria-card">
                     <div class="curadoria-icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-exchange-alt"></i>
                     </div>
-                    <span class="curadoria-badge">[ PDF ]</span>
-                    <h3>Guia Oficial do Tesouro Direto</h3>
-                    <p>Documento oficial emitido pelo Tesouro Nacional que detalha os tipos de títulos públicos disponíveis (Prefixado, Selic, IPCA+ e Renda+), suas regras de tributação, taxas de custódia e dinâmicas de marcação a mercado. Fundamental para embasar estratégias de Renda Fixa.</p>
+                    <span class="curadoria-badge">[ Tempo Real ]</span>
+                    <h3>Câmbio</h3>
+                    <p>Fontes dinâmicas como Remessa Online e Investing.com para cotação em tempo real de moedas como Dólar Americano (USD).</p>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="curadoria-card">
                     <div class="curadoria-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <span class="curadoria-badge">[ Artigo Web ]</span>
-                    <h3>Relatório Focus - Banco Central</h3>
-                    <p>Publicação semanal que resume as expectativas de mercado coletadas pelo Banco Central do Brasil. Contém projeções cruciais de indicadores macroeconômicos como IPCA (inflação), Taxa Selic, PIB e Câmbio para o ano corrente e os próximos, auxiliando no planejamento de cenários.</p>
+                    <span class="curadoria-badge">[ Tempo Real ]</span>
+                    <h3>Indicadores Econômicos</h3>
+                    <p>Dados de inflação, Focus e PIB pelo Banco Central e Trading Economics para projeções econômicas e acompanhamento da Taxa Selic.</p>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="curadoria-card">
                     <div class="curadoria-icon">
-                        <i class="fas fa-file-alt"></i>
+                        <i class="fas fa-coins"></i>
                     </div>
-                    <span class="curadoria-badge">[ Relatório ]</span>
-                    <h3>Agenda de Dividendos Mensal</h3>
-                    <p>Relatório consolidado contendo as datas de corte (Data Com) e as datas de pagamento (Data Ex) de proventos de empresas listadas na B3 e Fundos Imobiliários. Utilizado para alinhar o fluxo de caixa do investidor que foca na construção de renda passiva mensal.</p>
+                    <span class="curadoria-badge">[ Tempo Real ]</span>
+                    <h3>Investimentos e Dividendos</h3>
+                    <p>Agendas de dividendos, balanços do Tesouro Direto e calendário de FIIs de fontes como Money Times e Status Invest.</p>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="curadoria-card">
                     <div class="curadoria-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <span class="curadoria-badge">[ Artigo Web ]</span>
-                    <h3>Histórico da Taxa Selic</h3>
-                    <p>Série histórica documentando as oscilações da taxa básica de juros da economia brasileira ao longo do tempo. Esta fonte é vital para o NotebookLM correlacionar os ciclos econômicos com a performance de diferentes ativos de Renda Fixa e Renda Variável.</p>
+                    <span class="curadoria-badge">[ Tempo Real ]</span>
+                    <h3>Mercado de Ações</h3>
+                    <p>Cotações da Bovespa (BM&F), listagem completa de ações (B3) e relatórios de maiores altas usando portais como ADVFN e Mais Retorno.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="curadoria-card">
+                    <div class="curadoria-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <span class="curadoria-badge">[ Tempo Real ]</span>
+                    <h3>Notícias e Calendário</h3>
+                    <p>Acompanhamento diário de notícias e calendário econômico global por plataformas confiáveis, para entender eventos que impactam o mercado.</p>
                 </div>
             </div>
 
@@ -392,6 +410,29 @@
                     <span class="badge badge-beta">[ v0.5 Beta ]</span>
                 </div>
                 <p class="subtitle">A arquitetura do projeto (atualmente na Versão 0.5 Beta), as ferramentas utilizadas e os desafios de construir um hub financeiro inteligente.</p>
+            </div>
+
+            <h3 class="section-title">Engenharia de Prompts e Cicatrizes</h3>
+            <p style="text-align: center; margin-bottom: 20px; color: var(--text-secondary);">Construir uma IA baseada em links dinâmicos no NotebookLM traz desafios únicos. Abaixo, registro o processo empírico e as evoluções para evitar alucinações.</p>
+
+            <div class="challenges-grid" style="margin-bottom: 40px;">
+                <div class="info-box challenge-alert" style="border-left-color: #ff4d4d; background: rgba(255, 77, 77, 0.05);">
+                    <h3 style="color: #ff4d4d;">❌ Prompt Falho</h3>
+                    <p><strong>Comando:</strong> <em>"Faça um resumo do mercado hoje."</em></p>
+                    <p><strong>Resultado:</strong> Resposta genérica, muitas vezes sem ler os links das fontes recém-atualizadas, gerando alucinações de dias anteriores.</p>
+                </div>
+
+                <div class="info-box challenge-alert" style="border-left-color: #ffcc00; background: rgba(255, 204, 0, 0.05);">
+                    <h3 style="color: #ffcc00;">⚠️ Prompt Intermediário</h3>
+                    <p><strong>Comando:</strong> <em>"Leia os links do Valor Econômico e me diga como está o mercado."</em></p>
+                    <p><strong>Resultado:</strong> A resposta melhorou, mas a IA ainda misturava notícias antigas com novas por não ser forçada a focar em um ativo específico.</p>
+                </div>
+
+                <div class="info-box challenge-roadmap" style="border-left-color: #00cc66; background: rgba(0, 204, 102, 0.05); grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+                    <h3 style="color: #00cc66;">✅ Prompt Otimizado</h3>
+                    <p><strong>Comando:</strong> <em>"Aja como meu analista financeiro sênior. Acesse APENAS os dados da fonte 'B3: Maiores Altas e Baixas' e 'Banco Central: Selic Atual'. Me diga: 1) Qual a taxa Selic exata reportada lá agora? 2) Quais as 3 ações que mais subiram? Ignore qualquer conhecimento prévio."</em></p>
+                    <p><strong>Resultado:</strong> Respostas precisas, estruturadas e com os dados em tempo real da página conectada sem desvios para treinamentos prévios.</p>
+                </div>
             </div>
 
             <h3 class="section-title">Nosso Stack Tecnológico</h3>
