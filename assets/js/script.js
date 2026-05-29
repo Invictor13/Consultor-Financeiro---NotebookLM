@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Lógica de Navegação Elegante (Tabs)
-    const navButtons = document.querySelectorAll('.nav-btn');
-    const ctaButtons = document.querySelectorAll('.cta-btn'); // Botões de chamada para ação nas seções
     const navButtons = document.querySelectorAll('.nav-btn, .nav-btn-cta');
+    const ctaButtons = document.querySelectorAll('.cta-btn'); // Botões de chamada para ação nas seções
     const navButtonsHeader = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.content-section');
 
