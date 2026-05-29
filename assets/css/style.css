@@ -849,3 +849,64 @@ footer {
     padding: 12px 30px;
     border: 1px solid var(--accent);
 }
+
+/* ====== NOVOS ESTILOS DA ABA DESENVOLVIMENTO ====== */
+
+/* Badge Beta (Glow Dourado) */
+.badge-beta {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Grid de Desafios e Roadmap */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.challenges-grid .info-box {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.challenges-grid .info-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.challenges-grid .info-box h3 i {
+    font-size: 1.5rem;
+}
+
+/* Desafio Alerta (Gargalo) - Borda e Sombra Sutis em Laranja/Amarelo */
+.challenge-alert {
+    border: 1px solid rgba(255, 165, 0, 0.5); /* Orange/Yellow subtle border */
+    box-shadow: 0 8px 32px rgba(255, 165, 0, 0.1);
+}
+
+.challenge-alert:hover {
+    box-shadow: 0 12px 40px rgba(255, 165, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.challenge-alert h3 i {
+    color: rgba(255, 165, 0, 0.9); /* Icon in orange alert color */
+}
+
+/* Desafio Roadmap - Cor Padrão (Accent) */
+.challenge-roadmap h3 i {
+    color: var(--accent);
+}

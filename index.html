@@ -421,33 +421,72 @@
 
         <!-- DESENVOLVIMENTO -->
         <section id="desenvolvimento" class="content-section">
-            <h2>Desenvolvimento e Engenharia de Prompts</h2>
-            <p class="subtitle">Evolução, testes e troubleshooting.</p>
+            <div class="hero-section">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <h2>Desenvolvimento & Bastidores</h2>
+                    <span class="badge badge-beta">[ v0.5 Beta ]</span>
+                </div>
+                <p class="subtitle">A arquitetura do projeto (atualmente na Versão 0.5 Beta), as ferramentas utilizadas e os desafios de construir um hub financeiro inteligente.</p>
+            </div>
 
-            <div class="cards-grid">
-                <!-- Card Timeline 1 -->
-                <div class="card card-core">
+            <h3 class="section-title">Nosso Stack Tecnológico</h3>
+            <div class="workflow-grid tech-stack-grid">
+                <div class="card workflow-card">
                     <div class="card-header">
-                        <h3>V1: Teste Inicial</h3>
-                        <i class="fas fa-vial"></i>
+                        <h3>Deep Research</h3>
+                        <i class="fas fa-radar"></i>
                     </div>
-                    <p><strong>Objetivo:</strong> Lorem ipsum dolor sit amet.</p>
-                    <p><strong>Prompt:</strong> "Consectetur adipiscing elit..."</p>
-                    <p><strong>Desafio/Erro:</strong> Sed do eiusmod tempor incididunt ut labore.</p>
-                    <p><strong>Resultado:</strong> Ut enim ad minim veniam.</p>
+                    <p>Utilizado para realizar varreduras profundas e mapear as melhores fontes abertas e validadas do mercado financeiro.</p>
                 </div>
 
-                <!-- Card Timeline 2 -->
-                <div class="card card-core">
+                <div class="card workflow-card">
                     <div class="card-header">
-                        <h3>V2: Refinamento</h3>
-                        <i class="fas fa-flask"></i>
+                        <h3>NotebookLM</h3>
+                        <i class="fas fa-book-open"></i>
                     </div>
-                    <p><strong>Objetivo:</strong> Quis nostrud exercitation ullamco.</p>
-                    <p><strong>Prompt:</strong> "Laboris nisi ut aliquip ex ea commodo..."</p>
-                    <p><strong>Desafio/Erro:</strong> Duis aute irure dolor in reprehenderit.</p>
-                    <p><strong>Resultado:</strong> Voluptate velit esse cillum dolore.</p>
+                    <p>O motor de aterramento (grounding) e curadoria responsável por processar os documentos sem alucinações.</p>
                 </div>
+
+                <div class="card workflow-card">
+                    <div class="card-header">
+                        <h3>Gemini</h3>
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <p>O copiloto estratégico atuando na estruturação lógica, engenharia de prompts e refinamento do escopo.</p>
+                </div>
+
+                <div class="card workflow-card">
+                    <div class="card-header">
+                        <h3>Jules</h3>
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <p>Nossa inteligência de código, responsável por organizar toda a estrutura e arquitetura de pastas do repositório.</p>
+                </div>
+
+                <div class="card workflow-card">
+                    <div class="card-header">
+                        <h3>Google Antigravity</h3>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <p>Trabalhando em conjunto com o Jules para codificar e levantar toda essa interface web em HTML/CSS animado e responsivo.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Desafios e Roadmap</h3>
+            <div class="challenges-grid">
+                <div class="info-box challenge-alert">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Fontes Dinâmicas e Web Scraping</h3>
+                    <p>Nosso maior desafio atual é a integração com fontes dinâmicas. Precisamos consumir informações diárias em layouts estáticos e estruturados para facilitar a raspagem de dados (web scraping) com eficiência e baixo custo de processamento.</p>
+                </div>
+
+                <div class="info-box challenge-roadmap">
+                    <h3><i class="fas fa-cogs"></i> Projeto Estilo "Fundamentus" e Setorização</h3>
+                    <p>Nosso objetivo macro é evoluir esta interface para um painel semelhante ao site 'Fundamentus', exibindo todos os papéis da B3 com atualização em tempo real. Além disso, no curto prazo, precisamos aprimorar a captura de notícias e indicadores focados especificamente em Renda Fixa e Fundos Imobiliários (FIIs).</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <button class="btn-primary cta-btn nav-btn-cta" data-target="sobre">Conhecer o Autor (Sobre Mim) ➔</button>
             </div>
         </section>
 
