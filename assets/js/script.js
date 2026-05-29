@@ -100,9 +100,9 @@ const initCanvasAnimation = () => {
             this.directionX = directionX;
             this.directionY = directionY;
             this.size = size;
-            this.opacity = Math.random() * 0.5 + 0.1; // Opacidade inicial
+            this.opacity = Math.random() * 0.3 + 0.05; // Opacidade inicial reduzida
             this.fadeDirection = Math.random() > 0.5 ? 1 : -1; // 1 para aparecer, -1 para sumir
-            this.fadeSpeed = 0.005;
+            this.fadeSpeed = 0.003; // Reduzido para ficar mais suave
         }
 
         draw() {
@@ -126,9 +126,9 @@ const initCanvasAnimation = () => {
 
             // Fade in / Fade out orgânico
             this.opacity += this.fadeSpeed * this.fadeDirection;
-            if (this.opacity >= 0.8) {
+            if (this.opacity >= 0.4) { // Opacidade máxima reduzida
                 this.fadeDirection = -1; // Começa a sumir
-            } else if (this.opacity <= 0.1) {
+            } else if (this.opacity <= 0.05) { // Opacidade mínima reduzida
                 this.fadeDirection = 1; // Começa a aparecer
                 // Reposiciona levemente pra dar a impressão de nascer em outro lugar
                 this.x = Math.random() * width;
@@ -144,7 +144,7 @@ const initCanvasAnimation = () => {
         // Quantidade de partículas baseada no tamanho da tela
         const numberOfParticles = (width * height) / 15000;
         for (let i = 0; i < numberOfParticles; i++) {
-            const size = Math.random() * 15 + 10; // Tamanho entre 10 e 25
+            const size = Math.random() * 7 + 5; // Tamanho reduzido, entre 5 e 12
             const x = Math.random() * width;
             const y = Math.random() * height;
             const directionX = (Math.random() * 0.8) - 0.4;
@@ -164,8 +164,9 @@ const initCanvasAnimation = () => {
                 if (distance < 150) {
                     // Linhas conectando os cifrões, opacidade baseada na distância e opacidade das partículas
                     opacityValue = 1 - (distance / 150);
-                    const avgOpacity = (particlesArray[a].opacity + particlesArray[b].opacity) / 2;
-                    ctx.strokeStyle = `rgba(16, 185, 129, ${opacityValue * avgOpacity})`; // Verde vibrante
+                    // Reduzindo a intensidade da conexão multiplicando por 0.5
+                    const avgOpacity = ((particlesArray[a].opacity + particlesArray[b].opacity) / 2) * 0.5;
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${opacityValue * avgOpacity})`; // Verde vibrante, mas com menos opacidade
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
