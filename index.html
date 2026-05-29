@@ -21,7 +21,7 @@
             <nav class="main-nav">
                 <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Início</button>
                 <button class="nav-btn" data-target="miniguia"><i class="fas fa-graduation-cap"></i> Miniguia de Estudo</button>
-                <button class="nav-btn" data-target="curadoria"><i class="fas fa-list-check"></i> Curadoria de Fontes</button>
+                <button class="nav-btn" data-target="curadoria"><i class="fas fa-list-check"></i> Documentos</button>
                 <button class="nav-btn" data-target="fontes"><i class="fas fa-database"></i> Fontes (Mapeamento)</button>
                 <button class="nav-btn" data-target="notebook"><i class="fas fa-book"></i> NotebookLM</button>
                 <button class="nav-btn" data-target="desenvolvimento"><i class="fas fa-code"></i> Desenvolvimento</button>
@@ -116,78 +116,47 @@
             <h2>Miniguia de Estudo: Inteligência Financeira</h2>
             <p class="subtitle">A consolidação dos principais aprendizados, conceitos e ferramentas extraídos através da curadoria do NotebookLM.</p>
 
-            <h3>Resumos Estruturados</h3>
-            <div class="cards-grid">
-                <div class="card card-core">
-                    <div class="card-header">
-                        <h3>Planejamento Financeiro e Reserva de Emergência</h3>
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                </div>
-                <div class="card card-core">
-                    <div class="card-header">
-                        <h3>Estratégias em Renda Fixa (Tesouro, CDBs, LCI/LCA)</h3>
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                </div>
-                <div class="card card-core">
-                    <div class="card-header">
-                        <h3>Fundamentos da Renda Variável</h3>
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                </div>
-            </div>
+            <h3>Exemplos de Prompts para o NotebookLM</h3>
+            <p style="margin-bottom: 20px; color: var(--text-secondary);">Utilize estes exemplos de comandos (prompts) diretamente no NotebookLM para interagir com a base de documentos fornecida. Eles foram desenhados para extrair análises, resumos e informações complexas de forma clara e objetiva.</p>
 
-            <h3 style="margin-top: 40px;">Glossário de Conceitos</h3>
             <div class="accordion-container">
-                <button class="accordion"><i class="fas fa-spell-check"></i> Taxa Selic e CDI</button>
-                <div class="panel">
-                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
-                    </div>
-                </div>
-
-                <button class="accordion"><i class="fas fa-percentage"></i> Juros Compostos</button>
-                <div class="panel">
-                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
-                    </div>
-                </div>
-
-                <button class="accordion"><i class="fas fa-file-invoice-dollar"></i> Custo Efetivo Total (CET)</button>
-                <div class="panel">
-                    <div class="source-item" style="border-left: none; background: transparent; padding: 15px 0;">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">Prompts Reutilizáveis (Para Revisões)</h3>
-            <div class="accordion-container">
-                <button class="accordion"><i class="fas fa-robot"></i> Simulador de Cenários de Investimento</button>
+                <button class="accordion"><i class="fas fa-file-contract"></i> Resumo de Títulos Públicos (Tesouro Direto)</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Atue como um simulador de investimentos. Dado um capital inicial de R$ 10.000,00 e aportes mensais de R$ 500,00, projete o rendimento em 5 anos considerando a taxa Selic atual. Descreva dois cenários: um otimista e um conservador.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Atue como um simulador de investimentos. Dado um capital inicial de R$ 10.000,00 e aportes mensais de R$ 500,00, projete o rendimento em 5 anos considerando a taxa Selic atual. Descreva dois cenários: um otimista e um conservador."><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Com base no Guia Oficial do Tesouro Direto, resuma os principais tipos de títulos públicos disponíveis. Em seguida, indique de forma clara para qual perfil de investidor e prazo (curto, médio ou longo) cada um é mais adequado.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Com base no Guia Oficial do Tesouro Direto, resuma os principais tipos de títulos públicos disponíveis. Em seguida, indique de forma clara para qual perfil de investidor e prazo (curto, médio ou longo) cada um é mais adequado."><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
 
-                <button class="accordion"><i class="fas fa-user-shield"></i> Avaliador de Perfil de Risco</button>
+                <button class="accordion"><i class="fas fa-chart-line"></i> Análise de Tendência de Juros (Focus vs Selic)</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Gere um questionário de 5 perguntas de múltipla escolha para avaliar o meu perfil de investidor (conservador, moderado ou arrojado). Após eu responder, me dê o diagnóstico do meu perfil e sugira uma alocação de carteira ideal.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Gere um questionário de 5 perguntas de múltipla escolha para avaliar o meu perfil de investidor (conservador, moderado ou arrojado). Após eu responder, me dê o diagnóstico do meu perfil e sugira uma alocação de carteira ideal."><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Analisando o Relatório Focus e o Histórico da Taxa Selic fornecidos, me explique qual é a tendência para a taxa de juros nos próximos 12 meses. Como esse cenário afeta diretamente a rentabilidade de investimentos em Renda Fixa atrelados ao CDI?</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Analisando o Relatório Focus e o Histórico da Taxa Selic fornecidos, me explique qual é a tendência para a taxa de juros nos próximos 12 meses. Como esse cenário afeta diretamente a rentabilidade de investimentos em Renda Fixa atrelados ao CDI?"><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
 
-                <button class="accordion"><i class="fas fa-chart-pie"></i> Estruturação de Orçamento Mensal 50/30/20</button>
+                <button class="accordion"><i class="fas fa-spell-check"></i> Extração de Conceitos e Glossário</button>
                 <div class="panel">
                     <div class="prompt-code-container">
-                        <pre><code>Construa uma planilha orçamentária utilizando a regra 50/30/20 para uma renda líquida de R$ 5.000,00. Detalhe quais tipos de despesas se encaixam em cada categoria e sugira ferramentas para acompanhamento.</code></pre>
-                        <button class="copy-btn prompt-copy" data-url="Construa uma planilha orçamentária utilizando a regra 50/30/20 para uma renda líquida de R$ 5.000,00. Detalhe quais tipos de despesas se encaixam em cada categoria e sugira ferramentas para acompanhamento."><i class="fas fa-copy"></i> Copiar</button>
+                        <pre><code>Liste os 5 conceitos financeiros mais importantes abordados nos documentos fornecidos sobre investimentos. Explique cada conceito de forma extremamente didática e simplificada, utilizando exemplos do dia a dia, como se estivesse explicando para um investidor iniciante.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Liste os 5 conceitos financeiros mais importantes abordados nos documentos fornecidos sobre investimentos. Explique cada conceito de forma extremamente didática e simplificada, utilizando exemplos do dia a dia, como se estivesse explicando para um investidor iniciante."><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                </div>
+
+                <button class="accordion"><i class="fas fa-calendar-alt"></i> Planejamento com Agenda de Dividendos</button>
+                <div class="panel">
+                    <div class="prompt-code-container">
+                        <pre><code>Utilize a Agenda de Dividendos Mensal e os outros relatórios para criar uma estratégia de montagem de carteira focada na geração de renda passiva. Quais setores da economia pagam dividendos mais consistentes segundo os documentos?</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Utilize a Agenda de Dividendos Mensal e os outros relatórios para criar uma estratégia de montagem de carteira focada na geração de renda passiva. Quais setores da economia pagam dividendos mais consistentes segundo os documentos?"><i class="fas fa-copy"></i> Copiar</button>
+                    </div>
+                </div>
+
+                <button class="accordion"><i class="fas fa-balance-scale"></i> Tabela Comparativa de Riscos</button>
+                <div class="panel">
+                    <div class="prompt-code-container">
+                        <pre><code>Com base em todas as fontes carregadas, gere uma tabela Markdown comparando os principais riscos associados ao investimento no Tesouro Direto versus o investimento em Renda Variável (Ações/FIIs). Inclua os fatores de liquidez, volatilidade e garantia do FGC/Tesouro Nacional.</code></pre>
+                        <button class="copy-btn prompt-copy" data-url="Com base em todas as fontes carregadas, gere uma tabela Markdown comparando os principais riscos associados ao investimento no Tesouro Direto versus o investimento em Renda Variável (Ações/FIIs). Inclua os fatores de liquidez, volatilidade e garantia do FGC/Tesouro Nacional."><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                 </div>
             </div>
@@ -202,7 +171,7 @@
         <!-- CURADORIA DE FONTES -->
         <section id="curadoria" class="content-section">
             <div class="header-section">
-                <h2>Curadoria de Fontes</h2>
+                <h2>Documentos</h2>
                 <p class="subtitle">A base de dados selecionada para alimentar a Inteligência Artificial e garantir um escopo de informações confiáveis e atualizadas.</p>
             </div>
 
@@ -214,7 +183,7 @@
                     </div>
                     <span class="curadoria-badge">[ PDF ]</span>
                     <h3>Guia Oficial do Tesouro Direto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat et tellus cursus faucibus. Vestibulum tristique in mi nec pharetra.</p>
+                    <p>Documento oficial emitido pelo Tesouro Nacional que detalha os tipos de títulos públicos disponíveis (Prefixado, Selic, IPCA+ e Renda+), suas regras de tributação, taxas de custódia e dinâmicas de marcação a mercado. Fundamental para embasar estratégias de Renda Fixa.</p>
                     <a href="#" class="curadoria-link">Acessar Documento original</a>
                 </div>
 
@@ -225,7 +194,7 @@
                     </div>
                     <span class="curadoria-badge">[ Artigo Web ]</span>
                     <h3>Relatório Focus - Banco Central</h3>
-                    <p>Mauris pellentesque pulvinar pellentesque. Integer ac risus quis justo sodales luctus id ut justo. Phasellus hendrerit dolor vel augue suscipit.</p>
+                    <p>Publicação semanal que resume as expectativas de mercado coletadas pelo Banco Central do Brasil. Contém projeções cruciais de indicadores macroeconômicos como IPCA (inflação), Taxa Selic, PIB e Câmbio para o ano corrente e os próximos, auxiliando no planejamento de cenários.</p>
                     <a href="#" class="curadoria-link">Acessar Documento original</a>
                 </div>
 
@@ -236,7 +205,7 @@
                     </div>
                     <span class="curadoria-badge">[ Relatório ]</span>
                     <h3>Agenda de Dividendos Mensal</h3>
-                    <p>Praesent vestibulum diam at nisl viverra, in tristique massa tincidunt. Vivamus condimentum ante euismod, gravida est nec, varius odio.</p>
+                    <p>Relatório consolidado contendo as datas de corte (Data Com) e as datas de pagamento (Data Ex) de proventos de empresas listadas na B3 e Fundos Imobiliários. Utilizado para alinhar o fluxo de caixa do investidor que foca na construção de renda passiva mensal.</p>
                     <a href="#" class="curadoria-link">Acessar Documento original</a>
                 </div>
 
@@ -247,7 +216,7 @@
                     </div>
                     <span class="curadoria-badge">[ Artigo Web ]</span>
                     <h3>Histórico da Taxa Selic</h3>
-                    <p>Cras laoreet orci vitae efficitur sagittis. In a nibh non massa lacinia sollicitudin id nec tortor. Aenean hendrerit metus sit amet magna.</p>
+                    <p>Série histórica documentando as oscilações da taxa básica de juros da economia brasileira ao longo do tempo. Esta fonte é vital para o NotebookLM correlacionar os ciclos econômicos com a performance de diferentes ativos de Renda Fixa e Renda Variável.</p>
                     <a href="#" class="curadoria-link">Acessar Documento original</a>
                 </div>
             </div>
