@@ -17,8 +17,10 @@
             </h1>
             <nav class="main-nav">
                 <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Início</button>
+                <button class="nav-btn" data-target="miniguia"><i class="fas fa-graduation-cap"></i> Miniguia de Estudo</button>
                 <button class="nav-btn" data-target="fontes"><i class="fas fa-database"></i> Fontes</button>
                 <button class="nav-btn" data-target="notebook"><i class="fas fa-book"></i> NotebookLM</button>
+                <button class="nav-btn" data-target="desenvolvimento"><i class="fas fa-code"></i> Desenvolvimento</button>
                 <button class="nav-btn" data-target="sobre"><i class="fas fa-user-tie"></i> Sobre Mim</button>
             </nav>
         </div>
@@ -51,6 +53,57 @@
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <p>As 19 fontes de dados estão organizadas através de sanfonas (accordions) para garantir uma leitura suave e sem poluição visual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MINIGUIA DE ESTUDO -->
+        <section id="miniguia" class="content-section">
+            <h2>Miniguia de Estudo</h2>
+            <p class="subtitle">Consolidação do material de estudo e aprendizados chave.</p>
+
+            <h3>Resumos Estruturados</h3>
+            <div class="cards-grid">
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>Fundamentos</h3>
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>Aplicações Práticas</h3>
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Glossário & Prompts</h3>
+            <div class="accordion-container">
+                <!-- Glossário -->
+                <button class="accordion"><i class="fas fa-spell-check"></i> Glossário Financeiro</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span><strong>Termo 1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    </div>
+                    <div class="source-item">
+                        <span><strong>Termo 2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                    </div>
+                </div>
+
+                <!-- Prompts Reutilizáveis -->
+                <button class="accordion"><i class="fas fa-terminal"></i> Prompts Reutilizáveis</button>
+                <div class="panel">
+                    <div class="source-item">
+                        <span><strong>Análise Rápida:</strong> "Lorem ipsum dolor sit amet..."</span>
+                        <button class="copy-btn" data-url="Lorem ipsum dolor sit amet..."><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="source-item">
+                        <span><strong>Resumo Semanal:</strong> "Ut enim ad minim veniam..."</span>
+                        <button class="copy-btn" data-url="Ut enim ad minim veniam..."><i class="fas fa-copy"></i></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -189,6 +242,38 @@
             <div class="prompt-box">
                 <h4>Resumo Matinal (Morning Call)</h4>
                 <p>"Atue como meu consultor financeiro. Leia as manchetes do Valor Econômico e Bloomberg, verifique o Calendário Econômico do Investing.com e me dê um resumo de 3 pontos principais sobre o que eu preciso saber antes da bolsa abrir hoje."</p>
+            </div>
+        </section>
+
+        <!-- DESENVOLVIMENTO -->
+        <section id="desenvolvimento" class="content-section">
+            <h2>Desenvolvimento e Engenharia de Prompts</h2>
+            <p class="subtitle">Evolução, testes e troubleshooting.</p>
+
+            <div class="cards-grid">
+                <!-- Card Timeline 1 -->
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>V1: Teste Inicial</h3>
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <p><strong>Objetivo:</strong> Lorem ipsum dolor sit amet.</p>
+                    <p><strong>Prompt:</strong> "Consectetur adipiscing elit..."</p>
+                    <p><strong>Desafio/Erro:</strong> Sed do eiusmod tempor incididunt ut labore.</p>
+                    <p><strong>Resultado:</strong> Ut enim ad minim veniam.</p>
+                </div>
+
+                <!-- Card Timeline 2 -->
+                <div class="card card-core">
+                    <div class="card-header">
+                        <h3>V2: Refinamento</h3>
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <p><strong>Objetivo:</strong> Quis nostrud exercitation ullamco.</p>
+                    <p><strong>Prompt:</strong> "Laboris nisi ut aliquip ex ea commodo..."</p>
+                    <p><strong>Desafio/Erro:</strong> Duis aute irure dolor in reprehenderit.</p>
+                    <p><strong>Resultado:</strong> Voluptate velit esse cillum dolore.</p>
+                </div>
             </div>
         </section>
 
