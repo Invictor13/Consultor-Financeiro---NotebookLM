@@ -549,33 +549,111 @@ h3 {
     align-items: center;
 }
 
+/* Classes para responsividade do perfil (lado a lado desktop, empilhado mobile) */
+.profile-responsive {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+}
+
+@media (max-width: 768px) {
+    .profile-responsive {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+}
+
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent);
-    margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.profile-card h3 {
-    font-size: 1.8rem;
-    color: var(--text-primary);
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.profile-card p {
-    max-width: 600px;
-    margin: 0 auto;
+.profile-card h3 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.profile-card .profile-bio {
+    max-width: none;
+    margin: 0;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-section h4 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.skills-list li {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px 18px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li::before {
+    content: "\f00c"; /* FontAwesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent);
+    margin-right: 12px;
 }
 
 .social-links {
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+    }
+    .profile-card .profile-bio {
+        text-align: center;
+    }
 }
 .social-links a {
     color: var(--text-primary);
