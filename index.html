@@ -21,7 +21,8 @@
             <nav class="main-nav">
                 <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Início</button>
                 <button class="nav-btn" data-target="miniguia"><i class="fas fa-graduation-cap"></i> Miniguia de Estudo</button>
-                <button class="nav-btn" data-target="fontes"><i class="fas fa-database"></i> Fontes</button>
+                <button class="nav-btn" data-target="curadoria"><i class="fas fa-list-check"></i> Curadoria de Fontes</button>
+                <button class="nav-btn" data-target="fontes"><i class="fas fa-database"></i> Fontes (Mapeamento)</button>
                 <button class="nav-btn" data-target="notebook"><i class="fas fa-book"></i> NotebookLM</button>
                 <button class="nav-btn" data-target="desenvolvimento"><i class="fas fa-code"></i> Desenvolvimento</button>
                 <button class="nav-btn" data-target="sobre"><i class="fas fa-user-tie"></i> Sobre Mim</button>
@@ -111,7 +112,65 @@
             </div>
         </section>
 
-        <!-- FONTES -->
+        <!-- CURADORIA DE FONTES -->
+        <section id="curadoria" class="content-section">
+            <div class="header-section">
+                <h2>Curadoria de Fontes</h2>
+                <p class="subtitle">A base de dados selecionada para alimentar a Inteligência Artificial e garantir um escopo de informações confiáveis e atualizadas.</p>
+            </div>
+
+            <div class="curadoria-grid">
+                <!-- Card 1 -->
+                <div class="curadoria-card">
+                    <div class="curadoria-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <span class="curadoria-badge">[ PDF ]</span>
+                    <h3>Guia Oficial do Tesouro Direto</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat et tellus cursus faucibus. Vestibulum tristique in mi nec pharetra.</p>
+                    <a href="#" class="curadoria-link">Acessar Documento original</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="curadoria-card">
+                    <div class="curadoria-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <span class="curadoria-badge">[ Artigo Web ]</span>
+                    <h3>Relatório Focus - Banco Central</h3>
+                    <p>Mauris pellentesque pulvinar pellentesque. Integer ac risus quis justo sodales luctus id ut justo. Phasellus hendrerit dolor vel augue suscipit.</p>
+                    <a href="#" class="curadoria-link">Acessar Documento original</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="curadoria-card">
+                    <div class="curadoria-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <span class="curadoria-badge">[ Relatório ]</span>
+                    <h3>Agenda de Dividendos Mensal</h3>
+                    <p>Praesent vestibulum diam at nisl viverra, in tristique massa tincidunt. Vivamus condimentum ante euismod, gravida est nec, varius odio.</p>
+                    <a href="#" class="curadoria-link">Acessar Documento original</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="curadoria-card">
+                    <div class="curadoria-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <span class="curadoria-badge">[ Artigo Web ]</span>
+                    <h3>Histórico da Taxa Selic</h3>
+                    <p>Cras laoreet orci vitae efficitur sagittis. In a nibh non massa lacinia sollicitudin id nec tortor. Aenean hendrerit metus sit amet magna.</p>
+                    <a href="#" class="curadoria-link">Acessar Documento original</a>
+                </div>
+            </div>
+
+            <div class="center-box cta-container">
+                <button class="btn-primary cta-btn" data-target="notebook">Entenda como o NotebookLM processou isso ➔</button>
+            </div>
+        </section>
+
+        <!-- FONTES (Mapeamento) -->
         <section id="fontes" class="content-section">
             <h2>Mapeamento de Fontes (Data Lineage)</h2>
             <p class="subtitle">A infraestrutura de dados resiliente que alimenta nossa IA.</p>
