@@ -430,3 +430,152 @@ footer {
     background: var(--bg-glass);
     margin-top: auto;
 }
+/* ====== NOVOS ESTILOS DA ABA INÍCIO ====== */
+
+/* 1. Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.hero-section h2 {
+    font-size: 2.5rem;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+.badges-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.badge {
+    background: rgba(16, 185, 129, 0.15); /* Fundo verde com opacidade */
+    color: var(--accent); /* Dourado */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* 2. Contexto e Objetivos */
+.context-objectives-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+    .context-objectives-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.objectives-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.objectives-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+.objectives-list li::before {
+    content: "•";
+    color: var(--accent);
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* 3. Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.dashboard-card {
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid var(--core-color);
+}
+.dashboard-card h3 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.dashboard-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* 4. Mapa do Projeto */
+.project-map-section {
+    margin-bottom: 40px;
+}
+.project-map-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.project-map-list li {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-left: 4px solid var(--accent);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.project-map-list li i {
+    font-size: 1.2rem;
+    color: var(--accent);
+    width: 25px;
+    text-align: center;
+}
+.project-map-list li:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(10px);
+    border-color: var(--core-color);
+}
+.project-map-list li:hover i {
+    color: var(--core-color);
+}
+
+/* 5. Call to Action */
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.cta-btn {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    border: 2px solid transparent;
+}
+.cta-btn:hover {
+    box-shadow: 0 12px 35px rgba(255, 215, 0, 0.5);
+    background-color: var(--bg-main);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
