@@ -1,5 +1,5 @@
 # Consultor-Financeiro---NotebookLM
-# Ecossistema RAG Autossustentável: Consultoria e Análise do Mercado Financeiro no Google NotebookLM
+## Ecossistema RAG Autossustentável: Consultoria e Análise do Mercado Financeiro no Google NotebookLM
 
 ## 🎯 Contexto e Objetivos
 
