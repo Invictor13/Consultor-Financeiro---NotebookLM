@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Feedback visual sutil (Troca o ícone)
                 icon.classList.remove('fa-copy');
                 icon.classList.add('fa-check');
-                icon.style.color = '#10b981'; // Cor verde de sucesso
+                icon.style.color = 'var(--accent)'; // Cor dourada de sucesso
 
                 setTimeout(() => {
                     icon.classList.remove('fa-check');
@@ -41,6 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 2000);
             } catch (err) {
                 console.error('Falha ao copiar:', err);
+            }
+        });
+    });
+
+    // 3. Lógica do Accordion (Sanfonas)
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(acc => {
+        acc.addEventListener('click', function() {
+            // Toggle da classe active para mudar o ícone (+ / -)
+            this.classList.toggle('active-acc');
+
+            // Controla a abertura/fechamento do painel
+            const panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
     });
